@@ -12,7 +12,7 @@ export default class NotesContainer extends Component {
 
   componentDidMount() {
     axios
-      .get("api/v1/sticky_notes.json")
+      .get("http://localhost:3000/sticky_notes")
       .then((response) => {
         console.log(response);
         this.setState({
