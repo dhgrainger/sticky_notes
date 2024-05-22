@@ -1,0 +1,2 @@
+class StickyNotesController < ApplicationController
+end
