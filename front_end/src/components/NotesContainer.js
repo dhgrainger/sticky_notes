@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import Note from "./Notes";
 import NewStickyForm from './NewStickyForm';
+import { fabric } from 'fabric';
 
 export default class NotesContainer extends Component {
   constructor(props) {
@@ -22,6 +23,12 @@ export default class NotesContainer extends Component {
         });
       })
       .catch((error) => console.log(error));
+
+      const canvas = new fabric.Canvas('canvas', {
+        height: 800,
+        width: 800,
+        backgroundColor: 'pink'
+      })
   }
 
   addNewSticky(note_category, note_description) {
@@ -44,6 +51,7 @@ export default class NotesContainer extends Component {
           return <Note note={note} key={note.id} />;
         })}
         <NewStickyForm onNewSticky={this.addNewSticky} />
+        <canvas id="canvas" />
       </div>
     );
   }
