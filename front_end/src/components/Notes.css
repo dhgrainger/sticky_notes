@@ -1,0 +1,14 @@
+.Notes {
+  margin: 40px;
+  padding: 0px;
+  background-image: url('../img/postit.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+}
+
+.Notes_content {
+  font-size: 16px;
+  text-align: center;
+}
